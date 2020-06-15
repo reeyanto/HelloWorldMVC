@@ -5,14 +5,21 @@
  */
 package model;
 
+import java.util.Random;
+
 /**
  *
  * @author riyanto
  */
 public class HelloModel {
     
+    String[] people = {"Adi", "Budi", "Cindy", "Dodi", "Riyanto"};
+    
     public String getPeople() {
-        return "Hello, World! Riyanto was here!";
+        Random random = new Random();
+        int arrIndex  = random.nextInt(people.length);
+        
+        return "Hello, World! " + people[arrIndex] + " was here!";
     }
     
 }
