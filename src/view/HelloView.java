@@ -29,26 +29,33 @@ public class HelloView extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         btnHitme = new javax.swing.JButton();
+        btnLoadData = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         btnHitme.setText("Hit Me");
+
+        btnLoadData.setText("Load Data");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(151, 151, 151)
+                .addGap(100, 100, 100)
                 .addComponent(btnHitme)
-                .addContainerGap(164, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnLoadData)
+                .addContainerGap(102, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(128, 128, 128)
-                .addComponent(btnHitme)
-                .addContainerGap(143, Short.MAX_VALUE))
+                .addGap(124, 124, 124)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnHitme)
+                    .addComponent(btnLoadData))
+                .addContainerGap(147, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -102,6 +109,7 @@ public class HelloView extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnHitme;
+    public javax.swing.JButton btnLoadData;
     public javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

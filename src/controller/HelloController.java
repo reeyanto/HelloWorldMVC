@@ -23,9 +23,15 @@ public class HelloController implements ActionListener {
     
     @Override
     public void actionPerformed(ActionEvent e) {
+        String text = null;
+        
         if(e.getActionCommand().equals("Hit Me")) {
-            JOptionPane.showMessageDialog(null, helloModel.getPeople());
+            text = "Hello, World! " + helloModel.getPeople() + " was here!";
         }
+        else if(e.getActionCommand().equals("Load Data")) {
+            text = "I'm here, " + helloModel.getPeopleFromDB();
+        }        
+        JOptionPane.showMessageDialog(helloView, text);
     }
     
     public HelloController(HelloModel helloModel, HelloView helloView) {
@@ -35,6 +41,7 @@ public class HelloController implements ActionListener {
     
     public void start() {
         this.helloView.btnHitme.addActionListener(this);
+        this.helloView.btnLoadData.addActionListener(this);
         this.helloView.setVisible(true);
         this.helloView.setLocationRelativeTo(null);
         this.helloView.setResizable(false);
