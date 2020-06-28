@@ -34,18 +34,18 @@ public class HelloController implements ActionListener {
         JOptionPane.showMessageDialog(helloView, text);
     }
     
-    public HelloController(HelloModel helloModel, HelloView helloView) {
-        this.helloModel = helloModel;
-        this.helloView  = helloView;
+    public HelloController() {
+        this.helloModel = new HelloModel();
+        this.helloView  = new HelloView();
     }
     
     public void start() {
-        this.helloView.btnHitme.addActionListener(this);
-        this.helloView.btnLoadData.addActionListener(this);
-        this.helloView.setVisible(true);
-        this.helloView.setLocationRelativeTo(null);
-        this.helloView.setResizable(false);
-        this.helloView.jPanel1.setBackground(Color.red);
+        helloView.btnHitme.addActionListener(this);
+        helloView.btnLoadData.addActionListener(this);
+        helloView.setVisible(true);
+        helloView.setLocationRelativeTo(null);
+        helloView.setResizable(false);
+        helloView.jPanel1.setBackground(Color.red);
     }
     
 }

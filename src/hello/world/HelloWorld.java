@@ -6,8 +6,6 @@
 package hello.world;
 
 import controller.HelloController;
-import model.HelloModel;
-import view.HelloView;
 
 /**
  *
@@ -19,11 +17,7 @@ public class HelloWorld {
      * @param args the command line arguments
      */
     public static void main(String[] args) {        
-        HelloController helloController = new HelloController(
-            new HelloModel(), new HelloView()
-        );
-        
-        helloController.start();
+        new HelloController().start();
     }
     
 }
